@@ -14,4 +14,3 @@ func _input(event):
 			dead.append(int(last_press))
 		
 		last_press = key_name
-		print(dead)
