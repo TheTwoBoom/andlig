@@ -4,14 +4,21 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m762r"]
 bg_color = Color(0.105875395, 0.08494029, 0.16250047, 1)
+border_width_left = 5
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
 corner_radius_bottom_left = 6
 shadow_color = Color(0, 0, 0, 1)
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm5bn"]
 bg_color = Color(0.26666668, 0.23137255, 0.38039216, 1)
+border_width_left = 5
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 6
 corner_radius_top_right = 6
 corner_radius_bottom_right = 6
@@ -21,10 +28,13 @@ shadow_color = Color(0, 0, 0, 1)
 [resource]
 default_font = ExtResource("1_jm5bn")
 Button/colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
+Button/colors/font_focus_color = Color(0.9607843, 0.42745098, 0.42745098, 1)
+Button/colors/font_hover_color = Color(0.9607843, 0.42745098, 0.42745098, 1)
 Button/fonts/font = ExtResource("1_jm5bn")
 Button/styles/focus = SubResource("StyleBoxFlat_m762r")
 Button/styles/hover = SubResource("StyleBoxFlat_jm5bn")
 Button/styles/normal = SubResource("StyleBoxFlat_jm5bn")
+Button/styles/pressed = SubResource("StyleBoxFlat_m762r")
 Label/colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/shadow_offset_x = -3
