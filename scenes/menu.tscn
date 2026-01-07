@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cl5syl63d88ue"]
+[gd_scene load_steps=6 format=3 uid="uid://cl5syl63d88ue"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
 [ext_resource type="Theme" uid="uid://0qesaonb4plj" path="res://assets/panel_designs/dead_theme.tres" id="3_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://ge2ed2mi16nu" path="res://assets/images/pen.png" id="3_con2f"]
-[ext_resource type="Theme" uid="uid://smh2h23dm7tv" path="res://assets/font/font_no_shadow.tres" id="3_mhnvy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ytvr"]
 content_margin_left = 0.0
@@ -106,6 +105,7 @@ theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer"]
@@ -118,12 +118,13 @@ horizontal_alignment = 1
 layout_mode = 2
 
 [node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_lti8b")
 alignment = 1
 
-[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="AddPlayerButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 texture_normal = ExtResource("3_con2f")
@@ -131,43 +132,25 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 4
 columns = 2
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-theme = ExtResource("3_mhnvy")
-theme_override_font_sizes/font_size = 24
-text = "PlayerName1"
-
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-theme = ExtResource("3_mhnvy")
-theme_override_font_sizes/font_size = 24
-text = "PlayerName2"
-
-[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-theme = ExtResource("3_mhnvy")
-theme_override_font_sizes/font_size = 24
-text = "PlayerName3"
-
-[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/GridContainer"]
-layout_mode = 2
-theme = ExtResource("3_mhnvy")
-theme_override_font_sizes/font_size = 24
-text = "PlayerName4"
-
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer"]
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(128, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 24
 text = "Start!"
+
+[node name="AddMorePlayers" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Please add more players!"
 
 [node name="VersionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -181,3 +164,5 @@ horizontal_alignment = 2
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer/StartGameButton" to="." method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/HBoxContainer/AddPlayerButton" to="." method="_on_add_player_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]

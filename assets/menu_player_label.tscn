@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://57667mcp4r6"]
+
+[ext_resource type="Theme" uid="uid://btmjqviog7db5" path="res://assets/font/font_no_shadow.tres" id="1_roug3"]
+
+[node name="Label" type="Label"]
+theme = ExtResource("1_roug3")
+theme_override_font_sizes/font_size = 24
+text = "PlayerName1"
