@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl5syl63d88ue"]
+[gd_scene load_steps=4 format=3 uid="uid://cl5syl63d88ue"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://7jfmthmxmdk8" path="res://assets/add-profile.svg" id="3_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,11 +40,16 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -51,7 +57,7 @@ theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
-[node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -59,13 +65,87 @@ theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
 text = "Credits"
 
-[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer"]
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
 text = "Exit"
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 384)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_lti8b")
+text = "Add Players"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+texture_normal = ExtResource("3_con2f")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 24
+text = "PlayerName1"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 24
+text = "PlayerName2"
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 24
+text = "PlayerName3"
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 24
+text = "PlayerName4"
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(128, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_lti8b")
+theme_override_font_sizes/font_size = 24
+text = "Start!"
 
 [node name="VersionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -74,6 +154,6 @@ theme_override_font_sizes/font_size = 24
 text = "v0.1"
 horizontal_alignment = 2
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
