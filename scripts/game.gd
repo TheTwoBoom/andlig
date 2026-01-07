@@ -7,6 +7,6 @@ func _on_scanner_added_to_list() -> void:
 		toggle_container(id)
 
 func toggle_container(id):
-	var panel: PanelContainer = get_node("%ShadowContainer" + str(id))
-	var stylebox = load("res://assets/panel_designs/dead.tres")
-	panel.theme.set_stylebox("panel", "StyleBoxFlat", stylebox)
+	var panel: PanelContainer = get_node_or_null("%PanelContainer" + str(id))
+	var new_theme = preload("res://assets/panel_designs/dead_theme.tres")
+	panel.theme = new_theme
