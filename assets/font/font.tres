@@ -1,9 +1,20 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c1pt754iq3eux"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c1pt754iq3eux"]
 
 [ext_resource type="FontFile" uid="uid://dwejpsmil4dmm" path="res://assets/font/PlayfairDisplayBold-nRv8g.ttf" id="1_jm5bn"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jm5bn"]
+bg_color = Color(0.26666668, 0.23137255, 0.38039216, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0, 0, 0, 1)
+
 [resource]
 default_font = ExtResource("1_jm5bn")
+Button/colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
+Button/fonts/font = ExtResource("1_jm5bn")
+Button/styles/normal = SubResource("StyleBoxFlat_jm5bn")
 Label/colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 1)
 Label/constants/shadow_offset_x = -3

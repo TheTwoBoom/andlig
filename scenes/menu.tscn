@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ciy8dgir6gesp"]
+[gd_scene load_steps=3 format=3 uid="uid://cl5syl63d88ue"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
-[ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_ouk20"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -47,6 +47,7 @@ theme_override_constants/separation = 16
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
 text = "Start Game"
 
@@ -54,6 +55,7 @@ text = "Start Game"
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
 text = "Credits"
 
@@ -61,6 +63,7 @@ text = "Credits"
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
 text = "Exit"
 
