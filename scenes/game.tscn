@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbo0icv8hjbdc"]
+[gd_scene load_steps=8 format=3 uid="uid://bbo0icv8hjbdc"]
 
 [ext_resource type="PackedScene" uid="uid://cluq3rylga2p0" path="res://scenes/scanner.tscn" id="1_fc0e3"]
+[ext_resource type="StyleBox" uid="uid://dsnqjgddtrqlf" path="res://assets/panel_designs/neutral.tres" id="1_feb5d"]
 [ext_resource type="Script" uid="uid://ui03lftjj1hx" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="2_fc0e3"]
 [ext_resource type="Theme" uid="uid://btmjqviog7db5" path="res://assets/font/font_no_shadow.tres" id="4_lbhrr"]
 [ext_resource type="Theme" uid="uid://bdjd5shavif28" path="res://assets/font/big_font_red.tres" id="5_iywne"]
+
+[sub_resource type="Theme" id="Theme_p57ef"]
+PanelContainer/styles/panel = ExtResource("1_feb5d")
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -88,12 +92,27 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 3
 
-[node name="SuicideStop" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+theme = SubResource("Theme_p57ef")
+
+[node name="SuicideStop" type="CenterContainer" parent="MarginContainer/PanelContainer"]
 z_index = 1
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/SuicideStop"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/SuicideStop"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/SuicideStop/MarginContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MarginContainer/PanelContainer/SuicideStop/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_iywne")
 theme_override_font_sizes/font_size = 75
