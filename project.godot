@@ -14,6 +14,10 @@ config/name="Andlig"
 run/main_scene="uid://bak6y7ydlyjv3"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
