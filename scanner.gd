@@ -10,7 +10,8 @@ func _input(event):
 		var keycode = DisplayServer.keyboard_get_keycode_from_physical(event.physical_keycode)
 		var key_name = OS.get_keycode_string(keycode)
 
-		if key_name == "Enter" and not int(last_press) in dead and last_press in ALLOWED_INPUTS:
+		if key_name == "Enter" and not int(last_press) in dead and int(last_press) in ALLOWED_INPUTS:
 			dead.append(int(last_press))
 		
 		last_press = key_name
+		print(dead)
