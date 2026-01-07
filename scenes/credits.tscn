@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://cu6phj0da1r2b"]
+[gd_scene load_steps=2 format=3 uid="uid://cu6phj0da1r2b"]
+
+[ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_0bpdh"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -36,7 +38,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("1_0bpdh")
 theme_override_font_sizes/font_size = 24
 text = "Return to Menu"
