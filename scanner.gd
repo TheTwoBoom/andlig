@@ -5,7 +5,7 @@ const ALLOWED_INPUTS = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 var dead = []
 var last_press = ""
 
-signal added_to_ist
+signal added_to_list
 
 func _input(event):
 	if event is InputEventKey and event.pressed and not event.echo:
@@ -14,6 +14,6 @@ func _input(event):
 
 		if key_name == "Enter" and not int(last_press) in dead and int(last_press) in ALLOWED_INPUTS:
 			dead.append(int(last_press))
-			emit_signal("added_to_ist")
+			emit_signal("added_to_list")
 		
 		last_press = key_name
