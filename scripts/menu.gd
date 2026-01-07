@@ -31,6 +31,8 @@ func _input(event: InputEvent) -> void:
 	
 func add_player():
 	if %GridContainer.get_child_count() < 9:
+		if %LineEdit.text in PlayerManager.players:
+			return
 		PlayerManager.players.append(%LineEdit.text)
 		var label: Label = load("res://assets/menu_player_label.tscn").instantiate()
 
