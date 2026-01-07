@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbo0icv8hjbdc"]
+[gd_scene load_steps=5 format=3 uid="uid://bbo0icv8hjbdc"]
 
 [ext_resource type="PackedScene" uid="uid://cluq3rylga2p0" path="res://scenes/scanner.tscn" id="1_fc0e3"]
 [ext_resource type="Script" uid="uid://ui03lftjj1hx" path="res://scripts/game.gd" id="1_iywne"]
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="2_fc0e3"]
+[ext_resource type="Theme" uid="uid://btmjqviog7db5" path="res://assets/font/font_no_shadow.tres" id="4_lbhrr"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -76,5 +77,14 @@ size_flags_horizontal = 0
 theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 3
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("4_lbhrr")
+theme_override_font_sizes/font_size = 18
+text = "*The player marked in red is the killer. 
+Plese give them the laptop and scanner."
 
 [connection signal="added_to_list" from="Scanner" to="." method="_on_scanner_added_to_list"]

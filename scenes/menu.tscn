@@ -72,7 +72,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 40
-text = "Start Game"
+text = "Play"
 
 [node name="CreditsButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/VBoxContainer"]
 custom_minimum_size = Vector2(400, 0)
