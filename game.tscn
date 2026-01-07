@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bak6y7ydlyjv3"]
+[gd_scene load_steps=4 format=3 uid="uid://bbo0icv8hjbdc"]
 
 [ext_resource type="StyleBox" uid="uid://dsnqjgddtrqlf" path="res://panel_designs/neutral.tres" id="1_feb5d"]
 [ext_resource type="StyleBox" uid="uid://vheg3vjkqc04" path="res://panel_designs/green.tres" id="2_fc0e3"]
@@ -41,7 +41,7 @@ text = "People Alive: 0/9"
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 32
-text = "Andlig v0.1"
+text = "Ändlig v0.1"
 horizontal_alignment = 2
 vertical_alignment = 1
 

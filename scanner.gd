@@ -1,15 +1,17 @@
 extends Node
 
+const ALLOWED_INPUTS = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
 var dead = []
 var last_press = ""
 
 func _input(event):
-	if event is InputEventKey:
+	if event is InputEventKey and event.pressed and not event.echo:
 		var keycode = DisplayServer.keyboard_get_keycode_from_physical(event.physical_keycode)
-		last_press = keycode
-	
-		if str(keycode) == "Enter" and not last_press in dead :
+		var key_name = OS.get_keycode_string(keycode)
+
+		if key_name == "Enter" and not last_press in dead and last_press in ALLOWED_INPUTS:
 			dead.append(last_press)
-			print(str(dead) + "  " + last_press)
-			
-		keycode = OS.get_keycode_string(keycode)
+		
+		last_press = key_name
+		print(dead, "  ", last_press)
