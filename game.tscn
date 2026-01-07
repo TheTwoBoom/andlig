@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbo0icv8hjbdc"]
+[gd_scene load_steps=6 format=3 uid="uid://bbo0icv8hjbdc"]
 
 [ext_resource type="PackedScene" uid="uid://cluq3rylga2p0" path="res://scanner.tscn" id="1_fc0e3"]
 [ext_resource type="StyleBox" uid="uid://dsnqjgddtrqlf" path="res://panel_designs/neutral.tres" id="1_feb5d"]
+[ext_resource type="FontFile" uid="uid://dwejpsmil4dmm" path="res://PlayfairDisplayBold-nRv8g.ttf" id="2_7jktm"]
 [ext_resource type="StyleBox" uid="uid://cvqs0u6r65r5d" path="res://panel_designs/dead.tres" id="3_7jktm"]
-[ext_resource type="StyleBox" path="res://panel_designs/shadow.tres" id="4_fc0e3"]
+[ext_resource type="StyleBox" uid="uid://chtv0e8piv5s" path="res://panel_designs/shadow.tres" id="4_fc0e3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -39,12 +40,20 @@ alignment = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_7jktm")
 theme_override_font_sizes/font_size = 32
 text = "People Alive: 0/9"
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = -3
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("2_7jktm")
 theme_override_font_sizes/font_size = 32
 text = "Ändlig v0.1"
 horizontal_alignment = 2
