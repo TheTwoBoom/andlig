@@ -1,0 +1,11 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c1pt754iq3eux"]
+
+[ext_resource type="FontFile" uid="uid://dwejpsmil4dmm" path="res://PlayfairDisplayBold-nRv8g.ttf" id="1_7j002"]
+
+[resource]
+Label/colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_offset_x = -3
+Label/constants/shadow_offset_y = 2
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_7j002")
