@@ -16,6 +16,8 @@ func _on_play_button_pressed() -> void:
 		%AddMorePlayers.visible = true
 
 func _on_add_player_button_pressed() -> void:
+	if str(%LineEdit.text).strip_edges().is_empty():
+		return
 	add_player()
 	
 func _input(event: InputEvent) -> void:

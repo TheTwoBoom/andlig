@@ -13,7 +13,7 @@ func _ready() -> void:
 		%ShadowGridContainer.add_child(shadow_container)
 	
 	killer = PlayerManager.players.pick_random()
-	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(killer) + "/Label") as Label
+	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(killer)).find_child("NameLabel") as Label
 	var new_theme = preload("res://assets/font/big_font_red.tres")
 	label.theme = new_theme
 
@@ -23,6 +23,11 @@ func _on_scanner_added_to_list() -> void:
 		toggle_container(id)
 
 func toggle_container(id):
-	var panel: PanelContainer = get_node_or_null("%PanelContainer" + str(id))
+	var panel
+	for child in %PlayerGridContainer.get_children():
+		var child_id = int(child.find_child("IDLabel").text)
+		if id == child_id:
+			panel = child
+			break
 	var new_theme = preload("res://assets/panel_designs/dead_theme.tres")
 	panel.theme = new_theme
