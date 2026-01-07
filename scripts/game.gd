@@ -1,6 +1,5 @@
 extends Control
 
-var killer = null
 var people_killed = 0
 
 func _ready() -> void:
@@ -17,8 +16,8 @@ func _ready() -> void:
 		
 		container.find_child("NameLabel").text = player
 		container.find_child("IDLabel").text = str(id_counter)
-	killer = PlayerManager.players.pick_random()
-	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(killer)).find_child("NameLabel") as Label
+	PlayerManager.killer = PlayerManager.players.pick_random()
+	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(PlayerManager.killer)).find_child("NameLabel") as Label
 	var new_theme = preload("res://assets/font/big_font_red.tres")
 	label.theme = new_theme
 	%AliveLabel.text = "People Alive: " + str(%PlayerGridContainer.get_children().size()-people_killed) + "/" + str(%PlayerGridContainer.get_children().size())
