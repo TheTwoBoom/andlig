@@ -16,6 +16,7 @@ func _ready() -> void:
 		
 		container.find_child("NameLabel").text = player
 		container.find_child("IDLabel").text = str(id_counter)
+		
 	PlayerManager.killer = PlayerManager.players.pick_random()
 	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(PlayerManager.killer)).find_child("NameLabel") as Label
 	var new_theme = preload("res://assets/font/big_font_red.tres")
