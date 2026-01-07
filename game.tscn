@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbo0icv8hjbdc"]
+[gd_scene load_steps=5 format=3 uid="uid://bbo0icv8hjbdc"]
 
+[ext_resource type="PackedScene" uid="uid://cluq3rylga2p0" path="res://scanner.tscn" id="1_fc0e3"]
 [ext_resource type="StyleBox" uid="uid://dsnqjgddtrqlf" path="res://panel_designs/neutral.tres" id="1_feb5d"]
 [ext_resource type="StyleBox" uid="uid://vheg3vjkqc04" path="res://panel_designs/green.tres" id="2_fc0e3"]
 [ext_resource type="StyleBox" uid="uid://cvqs0u6r65r5d" path="res://panel_designs/red.tres" id="3_7jktm"]
@@ -11,6 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Scanner" parent="." instance=ExtResource("1_fc0e3")]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
