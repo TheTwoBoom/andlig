@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dwejpsmil4dmm"
-path="res://.godot/imported/PlayfairDisplayBold-nRv8g.ttf-673b87c18b7c17437acac857cd1b7d2d.fontdata"
+path="res://.godot/imported/PlayfairDisplayBold-nRv8g.ttf-f04382526879bee9acc69b6977c0241a.fontdata"
 
 [deps]
 
-source_file="res://PlayfairDisplayBold-nRv8g.ttf"
-dest_files=["res://.godot/imported/PlayfairDisplayBold-nRv8g.ttf-673b87c18b7c17437acac857cd1b7d2d.fontdata"]
+source_file="res://assets/font/PlayfairDisplayBold-nRv8g.ttf"
+dest_files=["res://.godot/imported/PlayfairDisplayBold-nRv8g.ttf-f04382526879bee9acc69b6977c0241a.fontdata"]
 
 [params]
 
