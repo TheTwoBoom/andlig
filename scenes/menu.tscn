@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cl5syl63d88ue"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
-[ext_resource type="Script" path="res://scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -69,6 +69,7 @@ text = "Exit"
 
 [node name="VersionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("1_lti8b")
 theme_override_font_sizes/font_size = 24
 text = "v0.1"
 horizontal_alignment = 2
