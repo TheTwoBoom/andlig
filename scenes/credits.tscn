@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu6phj0da1r2b"]
+[gd_scene load_steps=2 format=3 uid="uid://c6tqtabhgms2y"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_0bpdh"]
 
@@ -31,9 +31,13 @@ layout_mode = 2
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Game: Trulle123, TheTwoBoom
+theme = ExtResource("1_0bpdh")
+theme_override_constants/line_spacing = 12
+text = "CREDITS:
+Game: Trulle123 & TheTwoBoom
 Published under the MIT License
-Made during Hackclub Midnight"
+Made during Hackclub Midnight
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
