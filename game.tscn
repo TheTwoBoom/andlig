@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cluq3rylga2p0" path="res://scanner.tscn" id="1_fc0e3"]
 [ext_resource type="StyleBox" uid="uid://dsnqjgddtrqlf" path="res://panel_designs/neutral.tres" id="1_feb5d"]
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://font.tres" id="2_fc0e3"]
-[ext_resource type="StyleBox" uid="uid://chtv0e8piv5s" path="res://panel_designs/shadow.tres" id="4_fc0e3"]
+[ext_resource type="StyleBox" path="res://panel_designs/shadow.tres" id="4_fc0e3"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
@@ -70,46 +70,55 @@ theme_override_constants/v_separation = 16
 columns = 3
 
 [node name="ShadowContainer1" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer4" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer5" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer6" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer7" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer8" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
 
 [node name="ShadowContainer9" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/MarginContainer/ShadowGridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("4_fc0e3")
@@ -122,46 +131,118 @@ theme_override_constants/v_separation = 16
 columns = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
 
 [node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer2"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "2"
+horizontal_alignment = 1
 
 [node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer3"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "3"
+horizontal_alignment = 1
 
 [node name="PanelContainer4" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer4"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "4"
+horizontal_alignment = 1
 
 [node name="PanelContainer5" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer5"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "5"
+horizontal_alignment = 1
 
 [node name="PanelContainer6" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer6"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "6"
+horizontal_alignment = 1
 
 [node name="PanelContainer7" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer7"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "7"
+horizontal_alignment = 1
 
 [node name="PanelContainer8" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
 
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer8"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "8"
+horizontal_alignment = 1
+
 [node name="PanelContainer9" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = ExtResource("1_feb5d")
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer/PanelContainer9"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 80
+text = "9"
+horizontal_alignment = 1
