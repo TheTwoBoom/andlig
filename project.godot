@@ -23,3 +23,4 @@ enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.9490196, 0.29411766, 0.29411766, 1)
