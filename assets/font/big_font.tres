@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dlcwr75lew2kg"]
+
+[ext_resource type="FontFile" uid="uid://dwejpsmil4dmm" path="res://assets/font/PlayfairDisplayBold-nRv8g.ttf" id="1_3nl0m"]
+
+[resource]
+default_font = ExtResource("1_3nl0m")
+Label/colors/font_color = Color(0.99607843, 0.88235295, 0.7529412, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/shadow_offset_x = -6
+Label/constants/shadow_offset_y = 4
+Label/font_sizes/font_size = 85
+Label/fonts/font = ExtResource("1_3nl0m")
