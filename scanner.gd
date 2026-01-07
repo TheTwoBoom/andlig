@@ -14,6 +14,6 @@ func _input(event):
 
 		if key_name == "Enter" and not int(last_press) in dead and int(last_press) in ALLOWED_INPUTS:
 			dead.append(int(last_press))
-			emit_signal("added_to_ist")
+			emit_signal("added_to_list")
 		
 		last_press = key_name
