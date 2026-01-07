@@ -92,6 +92,7 @@ text = "Exit"
 
 [node name="PlayContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 custom_minimum_size = Vector2(250, 384)
 layout_mode = 2
