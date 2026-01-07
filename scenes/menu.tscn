@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
-[ext_resource type="Texture2D" uid="uid://7jfmthmxmdk8" path="res://assets/add-profile.svg" id="3_con2f"]
+[ext_resource type="Texture2D" uid="uid://ge2ed2mi16nu" path="res://assets/images/pen.png" id="3_con2f"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
