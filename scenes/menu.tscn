@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cl5syl63d88ue"]
+[gd_scene load_steps=7 format=3 uid="uid://cl5syl63d88ue"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
 [ext_resource type="Theme" uid="uid://0qesaonb4plj" path="res://assets/panel_designs/dead_theme.tres" id="3_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://ge2ed2mi16nu" path="res://assets/images/pen.png" id="3_con2f"]
+[ext_resource type="Theme" uid="uid://btmjqviog7db5" path="res://assets/font/font_no_shadow.tres" id="3_mhnvy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ytvr"]
 content_margin_left = 0.0
@@ -91,7 +92,7 @@ text = "Exit"
 
 [node name="PlayContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
 unique_name_in_owner = true
-visible = false
+z_index = 1
 custom_minimum_size = Vector2(250, 384)
 layout_mode = 2
 size_flags_vertical = 3
@@ -152,6 +153,9 @@ text = "Start!"
 unique_name_in_owner = true
 visible = false
 layout_mode = 2
+theme = ExtResource("3_mhnvy")
+theme_override_colors/font_color = Color(0.9490196, 0.29411766, 0.29411766, 1)
+theme_override_font_sizes/font_size = 16
 text = "Please add more players!"
 
 [node name="VersionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
