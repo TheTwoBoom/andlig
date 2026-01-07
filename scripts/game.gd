@@ -25,6 +25,9 @@ func _ready() -> void:
 
 func _on_scanner_added_to_list() -> void:
 	people_killed += 1
+	if people_killed+1 == %PlayerGridContainer.get_children().size():
+		PlayerManager.reset()
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	%AliveLabel.text = "People Alive: " + str(%PlayerGridContainer.get_children().size()-people_killed) + "/" + str(%PlayerGridContainer.get_children().size())
 	for id in %Scanner.dead:
 		toggle_container(id)
