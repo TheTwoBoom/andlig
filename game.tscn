@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cluq3rylga2p0" path="res://scanner.tscn" id="1_fc0e3"]
 [ext_resource type="StyleBox" uid="uid://dsnqjgddtrqlf" path="res://panel_designs/neutral.tres" id="1_feb5d"]
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://font.tres" id="2_fc0e3"]
-[ext_resource type="StyleBox" uid="uid://chtv0e8piv5s" path="res://panel_designs/shadow.tres" id="4_fc0e3"]
+[ext_resource type="StyleBox" path="res://panel_designs/shadow.tres" id="4_fc0e3"]
 
 [node name="Game" type="Control"]
 layout_mode = 3
