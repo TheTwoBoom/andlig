@@ -1,9 +1,12 @@
 extends Control
 
 var killer = null
+var people_killed = 0
 
 func _ready() -> void:
+	var id_counter = 0
 	for player in PlayerManager.players:
+		id_counter += 1
 		var container: PanelContainer = load("res://assets/player_container.tscn").instantiate()
 		container.name = "PanelContainer" + player
 		%PlayerGridContainer.add_child(container)
@@ -11,14 +14,18 @@ func _ready() -> void:
 		var shadow_container: PanelContainer = load("res://assets/shadow_container.tscn").instantiate()
 		shadow_container.name = "ShadowContainer" + player
 		%ShadowGridContainer.add_child(shadow_container)
-	
+		
+		container.find_child("NameLabel").text = player
+		container.find_child("IDLabel").text = str(id_counter)
 	killer = PlayerManager.players.pick_random()
 	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(killer)).find_child("NameLabel") as Label
 	var new_theme = preload("res://assets/font/big_font_red.tres")
 	label.theme = new_theme
+	%AliveLabel.text = "People Alive: " + str(%PlayerGridContainer.get_children().size()-people_killed) + "/" + str(%PlayerGridContainer.get_children().size())
 
 func _on_scanner_added_to_list() -> void:
-	%AliveLabel.text = "People Alive: " + str(9-%Scanner.dead.size()) + "/9"
+	people_killed += 1
+	%AliveLabel.text = "People Alive: " + str(%PlayerGridContainer.get_children().size()-people_killed) + "/" + str(%PlayerGridContainer.get_children().size())
 	for id in %Scanner.dead:
 		toggle_container(id)
 
@@ -29,5 +36,7 @@ func toggle_container(id):
 		if id == child_id:
 			panel = child
 			break
+	if !panel:
+		return
 	var new_theme = preload("res://assets/panel_designs/dead_theme.tres")
 	panel.theme = new_theme
