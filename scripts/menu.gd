@@ -30,3 +30,7 @@ func add_player():
 	label.text = %LineEdit.text
 	%GridContainer.add_child(label)
 	%LineEdit.text = ""
+
+
+func _on_ready() -> void:
+	%PlayContainer.visible = false
