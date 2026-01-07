@@ -1,8 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://cl5syl63d88ue"]
+[gd_scene load_steps=7 format=3 uid="uid://cl5syl63d88ue"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_lti8b"]
 [ext_resource type="Script" uid="uid://b7wr4cn2qta18" path="res://scripts/menu.gd" id="1_ouk20"]
+[ext_resource type="Theme" uid="uid://0qesaonb4plj" path="res://assets/panel_designs/dead_theme.tres" id="3_4ytvr"]
 [ext_resource type="Texture2D" uid="uid://ge2ed2mi16nu" path="res://assets/images/pen.png" id="3_con2f"]
+[ext_resource type="Theme" uid="uid://smh2h23dm7tv" path="res://assets/font/font_no_shadow.tres" id="3_mhnvy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4ytvr"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.1764706, 0.15294118, 0.24705882, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 5
+shadow_offset = Vector2(2, 2)
+anti_aliasing_size = 1.856
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -77,6 +94,8 @@ text = "Exit"
 custom_minimum_size = Vector2(250, 384)
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("3_4ytvr")
+theme_override_styles/panel = SubResource("StyleBoxFlat_4ytvr")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer"]
 layout_mode = 2
@@ -100,6 +119,8 @@ layout_mode = 2
 [node name="LineEdit" type="LineEdit" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_lti8b")
+alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(48, 48)
@@ -117,25 +138,25 @@ columns = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_lti8b")
+theme = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "PlayerName1"
 
 [node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_lti8b")
+theme = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "PlayerName2"
 
 [node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_lti8b")
+theme = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "PlayerName3"
 
 [node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PanelContainer/MarginContainer/VBoxContainer/GridContainer"]
 layout_mode = 2
-theme = ExtResource("1_lti8b")
+theme = ExtResource("3_mhnvy")
 theme_override_font_sizes/font_size = 24
 text = "PlayerName4"
 
@@ -150,6 +171,8 @@ text = "Start!"
 [node name="VersionLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("1_lti8b")
+theme_override_constants/shadow_offset_x = -2
+theme_override_constants/shadow_offset_y = 1
 theme_override_font_sizes/font_size = 24
 text = "v0.1"
 horizontal_alignment = 2
