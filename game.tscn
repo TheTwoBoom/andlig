@@ -59,51 +59,51 @@ layout_mode = 2
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/CenterContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
-theme_override_constants/h_separation = 28
+theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer4" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer5" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer6" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer7" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer8" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
 
 [node name="PanelContainer9" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/GridContainer"]
-custom_minimum_size = Vector2(512, 256)
+custom_minimum_size = Vector2(320, 160)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_mwb40")
