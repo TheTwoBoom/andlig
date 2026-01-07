@@ -50,3 +50,5 @@ size_flags_horizontal = 4
 theme = ExtResource("1_0bpdh")
 theme_override_font_sizes/font_size = 24
 text = "Return to Menu"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
