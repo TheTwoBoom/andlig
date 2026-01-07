@@ -1,5 +1,7 @@
 extends Control
 
+var id_counter = 0
+
 func _on_start_game_button_pressed() -> void:
 	%PlayContainer.visible = true
 
@@ -21,12 +23,18 @@ func _on_add_player_button_pressed() -> void:
 	add_player()
 	
 func _input(event: InputEvent) -> void:
+	if str(%LineEdit.text).strip_edges().is_empty():
+		return
+		
 	if event.is_action_pressed("ui_accept"):
 		add_player()
 	
 func add_player():
-	PlayerManager.players.append(%LineEdit.text)
-	var label: Label = load("res://assets/menu_player_label.tscn").instantiate()
-	label.text = %LineEdit.text
-	%GridContainer.add_child(label)
-	%LineEdit.text = ""
+	if %GridContainer.get_child_count() < 9:
+		PlayerManager.players.append(%LineEdit.text)
+		var label: Label = load("res://assets/menu_player_label.tscn").instantiate()
+
+		id_counter += 1
+		label.text = str(id_counter) + ": " + %LineEdit.text
+		%GridContainer.add_child(label)
+		%LineEdit.text = ""

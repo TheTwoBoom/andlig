@@ -92,6 +92,7 @@ text = "Exit"
 
 [node name="PlayContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer"]
 unique_name_in_owner = true
+visible = false
 z_index = 1
 custom_minimum_size = Vector2(250, 384)
 layout_mode = 2
@@ -125,6 +126,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_lti8b")
 alignment = 1
+max_length = 12
 
 [node name="AddPlayerButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(48, 48)
@@ -139,7 +141,6 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 4
-columns = 2
 
 [node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer/CenterContainer/HBoxContainer/PlayContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(128, 40)
