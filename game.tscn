@@ -50,9 +50,6 @@ text = "Ändlig v0.1"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="ShadowCenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer/VBoxContainer"]
 z_index = 1
 layout_mode = 2
