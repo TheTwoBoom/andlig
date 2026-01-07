@@ -3,8 +3,17 @@ extends Control
 var killer = null
 
 func _ready() -> void:
-	killer = %Scanner.ALLOWED_INPUTS.pick_random()
-	var label = get_node_or_null("%PanelContainer" + str(killer) + "/Label") as Label
+	for player in PlayerManager.players:
+		var container: PanelContainer = load("res://assets/player_container.tscn").instantiate()
+		container.name = "PanelContainer" + player
+		%PlayerGridContainer.add_child(container)
+		
+		var shadow_container: PanelContainer = load("res://assets/shadow_container.tscn").instantiate()
+		shadow_container.name = "ShadowContainer" + player
+		%ShadowGridContainer.add_child(shadow_container)
+	
+	killer = PlayerManager.players.pick_random()
+	var label = %PlayerGridContainer.get_node_or_null("PanelContainer" + str(killer) + "/Label") as Label
 	var new_theme = preload("res://assets/font/big_font_red.tres")
 	label.theme = new_theme
 
