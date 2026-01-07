@@ -15,6 +15,10 @@ run/main_scene="uid://cl5syl63d88ue"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 "<<<<<<<Updatedupstream[editor_plugins]enabled"=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
 
+[autoload]
+
+PlayerManager="*res://scripts/player_manager.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
