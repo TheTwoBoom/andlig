@@ -13,10 +13,6 @@ func _input(event):
 		var key_name = OS.get_keycode_string(keycode)
 
 		if key_name == "Enter" and not int(last_press) in dead and int(last_press) in ALLOWED_INPUTS:
-			for child in %PlayerGridContainer.get_children():
-				if child.find_child("NameLabel").text == PlayerManager.killer and child.find_child("IDLabel").text == str(last_press):
-					PlayerManager.reset()
-					get_tree().change_scene_to_file("res://scenes/game_over_killer.tscn")
 			dead.append(int(last_press))
 			emit_signal("added_to_list")
 		
