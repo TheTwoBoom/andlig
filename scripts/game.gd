@@ -24,13 +24,14 @@ func _ready() -> void:
 	%AliveLabel.text = "People Alive: " + str(%PlayerGridContainer.get_children().size()-people_killed) + "/" + str(%PlayerGridContainer.get_children().size())
 
 func _on_scanner_added_to_list() -> void:
+	for child in %PlayerGridContainer.get_children():
+		if child.find_child("NameLabel").text == PlayerManager.killer and int(child.find_child("IDLabel").text) in $Scanner.dead:
+			%PanelContainer.visible = true
+			return
 	people_killed += 1
 	if people_killed+1 == %PlayerGridContainer.get_children().size():
 		PlayerManager.reset()
 		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
-	for child in %PlayerGridContainer.get_children():
-		if child.find_child("NameLabel").text == PlayerManager.killer and child.find_child("IDLabel").text in $Scanner.dead:
-			%PanelContainer.visible = true
 	%AliveLabel.text = "People Alive: " + str(%PlayerGridContainer.get_children().size()-people_killed) + "/" + str(%PlayerGridContainer.get_children().size())
 	for id in %Scanner.dead:
 		toggle_container(id)
