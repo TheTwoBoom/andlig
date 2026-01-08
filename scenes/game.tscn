@@ -94,6 +94,8 @@ columns = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 unique_name_in_owner = true
+visible = false
+z_index = 500
 layout_mode = 2
 theme = SubResource("Theme_p57ef")
 

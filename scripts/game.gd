@@ -51,3 +51,6 @@ func toggle_container(id):
 
 func _on_scanner_hide_window() -> void:
 	%PanelContainer.visible = false
+	for child in %PlayerGridContainer.get_children():
+		if child.find_child("NameLabel").text == PlayerManager.killer and int(child.find_child("IDLabel").text) in $Scanner.dead:
+			%Scanner.dead.erase(int(child.find_child("IDLabel").text))
