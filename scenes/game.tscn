@@ -94,7 +94,6 @@ columns = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 2
 theme = SubResource("Theme_p57ef")
 
@@ -117,10 +116,19 @@ layout_mode = 2
 layout_mode = 2
 theme = ExtResource("5_iywne")
 theme_override_font_sizes/font_size = 75
-text = "BAD, BAD, BAD
-Don't kill yourself!
+text = "BAD, BAD, BAD!
+Don't kill yourself!!!
 You cant experience the fun
 of murder if your dead, silly!"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="MarginContainer/PanelContainer/SuicideStop/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_fc0e3")
+theme_override_font_sizes/font_size = 40
+text = "
+*Press  [space] to close this window
+ and continue with you life ◝(ᵔᗜᵔ)◜"
 horizontal_alignment = 1
 
 [connection signal="added_to_list" from="Scanner" to="." method="_on_scanner_added_to_list"]
