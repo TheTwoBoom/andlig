@@ -46,3 +46,7 @@ func toggle_container(id):
 		return
 	var new_theme = preload("res://assets/panel_designs/dead_theme.tres")
 	panel.theme = new_theme
+
+
+func _on_scanner_hide_window() -> void:
+	%PanelContainer.visible = false

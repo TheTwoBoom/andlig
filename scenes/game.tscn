@@ -132,3 +132,4 @@ text = "
 horizontal_alignment = 1
 
 [connection signal="added_to_list" from="Scanner" to="." method="_on_scanner_added_to_list"]
+[connection signal="hide_window" from="Scanner" to="." method="_on_scanner_hide_window"]
