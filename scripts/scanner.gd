@@ -12,8 +12,13 @@ func _input(event):
 		var keycode = DisplayServer.keyboard_get_keycode_from_physical(event.physical_keycode)
 		var key_name = OS.get_keycode_string(keycode)
 
-		if key_name == "Enter" and not int(last_press) in dead and int(last_press) in ALLOWED_INPUTS:
-			dead.append(int(last_press))
-			emit_signal("added_to_list")
+		if (
+			key_name == "Enter" and 
+			not int(last_press) in dead and 
+			int(last_press) in ALLOWED_INPUTS
+			):
+				# insert suicide check here
+				dead.append(int(last_press))
+				emit_signal("added_to_list")
 		
 		last_press = key_name
