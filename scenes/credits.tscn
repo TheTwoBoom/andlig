@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cu6phj0da1r2b"]
 
 [ext_resource type="Theme" uid="uid://c1pt754iq3eux" path="res://assets/font/font.tres" id="1_0bpdh"]
-[ext_resource type="Script" uid="uid://boqsw3ji450d1" path="res://scripts/credits.gd" id="1_2ckv8"]
+[ext_resource type="Script" path="res://scripts/credits.gd" id="1_2ckv8"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
